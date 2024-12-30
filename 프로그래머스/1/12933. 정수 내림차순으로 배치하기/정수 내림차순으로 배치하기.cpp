@@ -19,11 +19,11 @@ long long solution(long long n) {
         for(int j = i; j<v1.size(); j++)
         {
             int temp = 0;
-            if(v1[i] > v1[j])
+            if(v1.at(i) > v1.at(j))
             {
-                temp = v1[i];
-                v1[i] = v1[j];
-                v1[j] = temp;
+                temp = v1.at(i);
+                v1.at(i) = v1.at(j);
+                v1.at(j) = temp;
             }
         }
         v2.push_back(v1[i]);
