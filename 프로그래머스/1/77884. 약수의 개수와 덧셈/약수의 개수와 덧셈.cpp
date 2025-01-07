@@ -6,12 +6,9 @@ using namespace std;
 
 bool isPow(int num)
 {
-    for(int i = sqrt(num) - 1; i < sqrt(num) + 1; i++)
+    if(pow(static_cast<int>(sqrt(num)), 2) == num)
     {
-        if(pow(i, 2) == num)
-        {
-            return true;
-        }
+        return true;
     }
     return false;
 }
