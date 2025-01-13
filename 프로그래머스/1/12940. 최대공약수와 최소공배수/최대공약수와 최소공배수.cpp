@@ -6,16 +6,16 @@ using namespace std;
 vector<int> solution(int n, int m) {
     vector<int> answer;
     int gcd = n;
-    int lcd = m;
+    int lcm = m;
     while(n % gcd != 0 || m % gcd != 0)
     {
         gcd--;
     }
     answer.push_back(gcd);
-    while(lcd % n != 0 || lcd % m != 0)
+    while(lcm % n != 0 || lcm % m != 0)
     {
-        lcd++;
+        lcm++;
     }
-    answer.push_back(lcd);
+    answer.push_back(lcm);
     return answer;
 }
