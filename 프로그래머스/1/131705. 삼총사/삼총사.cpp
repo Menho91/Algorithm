@@ -7,14 +7,10 @@ int solution(vector<int> number) {
     int answer = 0;
     for(int i = 0; i < number.size(); i++)
     {
-        for(int j = 0; j < number.size(); j++)
+        for(int j = i + 1; j < number.size(); j++)
         {
-            for(int k = 0; k < number.size(); k++)
+            for(int k = j + 1; k < number.size(); k++)
             {
-                if(i == j || i == k || j == k)
-                {
-                    continue;
-                }
                 if(number[i] + number[j] + number[k] == 0)
                 {
                     answer++;
@@ -22,5 +18,5 @@ int solution(vector<int> number) {
             }
         }
     }
-    return answer /= 6;
+    return answer;
 }
