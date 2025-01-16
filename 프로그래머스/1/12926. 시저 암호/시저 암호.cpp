@@ -13,25 +13,11 @@ string solution(string s, int n) {
         }
         else if(c >= 'a' && c <= 'z')
         {
-            if(c + n > 'z')
-            {
-                answer += c + n - 26;
-            }
-            else
-            {
-                answer += c + n;
-            }
+            answer += (((c + n) - 'a') % 26) + 'a';
         }
         else
         {
-            if(c + n > 'Z')
-            {
-                answer += c + n - 26;
-            }
-            else
-            {
-                answer += c + n;
-            }
+            answer += (((c + n) - 'A') % 26) + 'A';
         }
     }
     return answer;
